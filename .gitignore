@@ -1,0 +1,21 @@
+## --- ARCHIVOS DE VISUAL STUDIO ---
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## --- CARPETAS DE COMPILACIÓN (DENTRO DE TU PROYECTO) ---
+**/bin/
+**/obj/
+**/x64/
+**/x86/
+
+## --- PAQUETES DE NUGET (LA CARPETA QUE SE VE EN TU IMAGEN) ---
+packages/
+!packages/repositories.config
+
+## --- CONFIGURACIONES LOCALES ---
+*.Publish.xml
+*.pubxml
+*.pubxml.user
