@@ -5,7 +5,7 @@
 *.userosscache
 *.sln.docstates
 
-## --- CARPETAS DE COMPILACIÓN (DENTRO DE TU PROYECTO) ---
+## --- CARPETAS DE COMPILACION (DENTRO DE TU PROYECTO) ---
 **/bin/
 **/obj/
 **/x64/
@@ -19,3 +19,25 @@ packages/
 *.Publish.xml
 *.pubxml
 *.pubxml.user
+
+## --- ARCHIVOS DE BASE DE DATOS (SQL SERVER) ---
+*.mdf
+*.ldf
+*.sdf
+*.msi
+*.msm
+*.msp
+
+## --- FRONTEND Y HERRAMIENTAS DE DISENO (Por si usan Tailwind/Node) ---
+node_modules/
+.pnpm-store/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## --- SISTEMAS OPERATIVOS ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
