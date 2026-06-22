@@ -1,5 +1,5 @@
 <h1>LEER POR FAVOR</h1>
-<h2>Pasos para restaurar correctamente el proyecto</h2>
+<h3>Pasos para restaurar correctamente el proyecto</h3>
 <ol>
   <li>Clonar el repositorio: git clone https://github.com/JeremyLandaCuayla/PA4_Prueba</li>
   <li>Restaurar paquetes NuGet en 'Herramientas/Administrador de paquetes NuGet/Consola de Administrador de paquetes': Update-Package -Reinstall</li>
