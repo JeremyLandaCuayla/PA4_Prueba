@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="PA4_Prueba.About" %>
+﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="PA4_Prueba.About" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <div class=" w-[80%] mx-auto my-1 h-screen
     flex items-center justify-center">
