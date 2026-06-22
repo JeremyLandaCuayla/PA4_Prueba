@@ -1,4 +1,4 @@
-<h1>LEER POR FAVOR</h1>
+<h1>¡LEER POR FAVOR!</h1>
 <h3>Pasos para restaurar correctamente el proyecto</h3>
 <ol>
   <li>Clonar el repositorio: git clone https://github.com/JeremyLandaCuayla/PA4_Prueba</li>
