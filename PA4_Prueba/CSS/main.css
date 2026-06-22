@@ -1,0 +1,20 @@
+﻿/*global*/
+* {
+    transition: 0.3s ease;
+}
+
+.font-principal {
+    font-family: var(--font-principal);
+}
+
+nav ul li a:hover {
+    color: #b3b3b3;
+}
+
+nav ul li a:active {
+    color: #999999;
+}
+
+.espaciado-nombre {
+    letter-spacing: 0.1em;
+}

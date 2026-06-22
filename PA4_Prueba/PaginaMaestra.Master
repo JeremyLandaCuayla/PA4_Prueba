@@ -1,21 +1,185 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.Master.cs" Inherits="PA4_Prueba.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.master.cs" Inherits="PA4_Prueba.PaginaMaestra" %>
+
+<!DOCTYPE html>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- agregue el segundo meta para el diseño responsive -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <!--Tailwind CSS-->
+    <link href="CSS/output.css" rel="stylesheet" />
+    <!--Archivos CSS-->
+    <link href="CSS/main.css" rel="stylesheet"/>
+
+    <!--Icon Menu Hamburguesa-->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <h1>HOLA</h1>
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
-</body>
+    <body 
+        class="
+        bg-[var(--color-principal)] h-screen">
+
+        <!--HEADER-->
+ <header style='font-family: "ADLaM Display", cursive;' class="bg-black text-white">
+     <nav class="flex items-center justify-between w-[92%] mx-auto py-4">
+         <a href="Inicio.aspx"
+             class="text-3xl font-bold espaciado-nombre"
+             >EscueIdiomas</a>
+
+         <div class="nav-links duration-500 md:static md:min-h-fit absolute 
+             md:bg-black md:w-auto md:text-white bg-white text-black
+             min-h-[30vh] left-0 top-[-100%] w-full
+             flex justify-center items-center px-5">
+             <ul class="flex md:flex-row flex-col 
+                 md:items-center 
+                 md:gap-[4vw]
+                 gap-8">
+                 <li><a href="Inicio.aspx">Home</a></li>
+                 <li><a href="About.aspx">About</a></li>
+                 <li><a href="#">Contact</a></li>
+             </ul>
+         
+             <!-- Para un Button quiza de "Buy"
+             <div>
+                 <button>Login</button>
+                 <button>Sign Up</button>
+             </div>
+             -->
+         </div>
+
+         <div class="flex items-center gap-6 
+             text-white">
+             <ion-icon onclick="onToggleMenu(this)" class="text-3xl cursor-pointer md:hidden" name="menu"></ion-icon>
+         </div>
+     </nav>
+ </header>
+       
+        
+        <!--MAIN CONTENT-->
+        <main class="flex-grow h-screen">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <!--FOOTER-->
+        <footer style='font-family: "ADLaM Display", cursive;' 
+            class="bg-black text-white py-4">
+                
+                <!-- Enlaces a paginas de informacion -->
+                <div 
+                    class="w-[92%] mx-auto
+                    flex flex-col md:flex-row md:justify-around
+                    gap-8 text-center py-4">
+                
+                    <ul class="md:w-auto w-full">
+                        <h1
+                            class="mb-1 font-semibold tracking-widest">
+                            ROMANCE
+                        </h1>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Portugués</a></li>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Francés</a></li>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Italiano</a></li>
+                    </ul>
+                
+                    <ul class="md:w-auto w-full">
+                        <h1
+                            class="mb-1 font-semibold tracking-widest">
+                            UTIL
+                        </h1>                        
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Inglés</a></li>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Alemán</a></li>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Ruso</a></li>
+                    </ul>
+                
+                    <ul class="md:w-auto w-full">
+                        <h1
+                            class="mb-1 font-semibold tracking-widest">
+                            ASIA
+                        </h1>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Mandarín</a></li>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Japonés</a></li>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Coreano</a></li>
+                    </ul>
+
+                    <ul class="md:w-auto w-full">
+                        <h1
+                            class="mb-1 font-semibold tracking-widest">
+                            EXTRA
+                        </h1>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Árabe</a></li>
+                        <li><a class="text-sm duration 300 text-gray-400
+                            hover:text-white leading-8"
+                            href="#">Hindi</a></li>
+                    </ul>
+
+                </div>
+
+                <!--Copyright y redes sociales (iconos)-->
+                <div class="w-[92%] mx-auto
+                    flex flex-col md:flex-row md:justify-around
+                    gap-12 text-center py-8">
+                    <span>&copy; 2026 EscueIdiomas · All rights reserved</span>
+                    <span>Terms · Privacy Policy</span>
+
+                    <!-- Iconos -->
+                    <div class="text-xl">
+                        <span class="p-2 cursor-pointer inline-flex items-center
+                            rounded-full hover:bg-[#999999] hover:text-black">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </span>
+                        <span class="p-2 cursor-pointer inline-flex items-center
+                            rounded-full hover:bg-[#999999] hover:text-black">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </span>
+                        <span class="p-2 cursor-pointer inline-flex items-center
+                            rounded-full hover:bg-[#999999] hover:text-black">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </span>
+                        <span class="p-2 cursor-pointer inline-flex items-center
+                            rounded-full hover:bg-[#999999] hover:text-black">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </span>
+                        <span class="p-2 cursor-pointer inline-flex items-center
+                            rounded-full hover:bg-[#999999] hover:text-black">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </span>
+                    </div>
+                </div>
+        </footer>
+
+        <script>
+            const navLinks = document.querySelector('.nav-links');
+
+            function onToggleMenu(e) {
+                //cambiamos el icono
+                e.name = e.name == 'menu' ? 'close' : 'menu';
+                //mostramos el menu
+                navLinks.classList.toggle('top-[10%]');
+            }
+        </script>
+    </body>
 </html>

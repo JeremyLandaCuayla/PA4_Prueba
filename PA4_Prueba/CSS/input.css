@@ -1,0 +1,10 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+
+@import "tailwindcss";
+
+:root {
+    --color-principal: #f5be3d;
+    --color-secundario: #ffe4a8;
+    --color-whiteown: #ffffff;
+    --font-adlam: "ADLaM Display", cursive;
+}
