@@ -41,15 +41,8 @@
                  gap-8">
                  <li><a href="Inicio.aspx">Home</a></li>
                  <li><a href="About.aspx">About</a></li>
-                 <li><a href="#">Contact</a></li>
+                 <li><a href="Contact.aspx">Contact</a></li>
              </ul>
-         
-             <!-- Para un Button quiza de "Buy"
-             <div>
-                 <button>Login</button>
-                 <button>Sign Up</button>
-             </div>
-             -->
          </div>
 
          <div class="flex items-center gap-6 
